@@ -8,7 +8,6 @@
     width: 100%;
     max-width: 1024px;
     display: flex;
-    flex-direction: column; /* Adjusted to column for better stacking */
     gap: 20px; /* Increased gap for better separation */
     margin-top: 20px;
 }
@@ -60,7 +59,7 @@
     cursor: pointer;
 }
 
-.lsOPtions{
+.lsOptions {
     padding: 10px;
 }
 
@@ -82,7 +81,7 @@
     width: 50px;
 }
 
-.listSearch>button{
+.listSearch > button {
     padding: 10px;
     background-color: #0071c2;
     color: white;
@@ -93,7 +92,23 @@
 
 .listResult {
     flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .listWrapper {
+        flex-direction: column;
+    }
+
+    .listSearch {
+        align-self: auto;
+        position: static;
+    }
+
+    .listResult {
+        flex: 1;
+    }
 }
